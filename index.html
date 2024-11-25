@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AeroPoint</title>
+    <meta
+      name="description"
+      content="AeroPoint is an advanced waypoint database manager designed for aviation, enabling seamless import, export, and mapping of helicopter waypoints with ForeFlight integration."
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Add modern normalize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    <!-- Add Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/AeroPoint2.png" alt="AeroPoint Logo" />
+        </div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#security">Security</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <h1>Advanced Aviation Waypoint Management</h1>
+        <h1>Aircraft Deconfliction</h1>
+        <p>
+          Streamline your aviation operations with our comprehensive waypoint
+          management system and aircraft deconfliction
+        </p>
+        <a href="#contact" class="cta-button">Request Access</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="features" class="features">
+        <h2>Core Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Waypoint Management</h3>
+            <p>
+              Create, import, and manage waypoints with support for multiple
+              coordinate formats
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-plane"></i>
+            <h3>ForeFlight Integration</h3>
+            <p>
+              Seamless export to ForeFlight with automatic content pack
+              generation
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-folder-tree"></i>
+            <h3>Program Organization</h3>
+            <p>
+              Organize waypoints, plates, and map layers into distinct programs
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-cloud"></i>
+            <h3>Dropbox Sync</h3>
+            <p>
+              Optional Dropbox integration for automatic file synchronization
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="benefits">
+        <h2>Why Choose AeroPoint?</h2>
+        <div class="benefits-container">
+          <div class="benefit">
+            <h3>Dedicated Instance</h3>
+            <p>
+              Each organization gets their own secure, isolated deployment at
+              company.aeropoint.app
+            </p>
+          </div>
+          <div class="benefit">
+            <h3>Enhanced Security</h3>
+            <p>
+              Isolated databases and deployments ensure your data remains
+              private and protected
+            </p>
+          </div>
+          <div class="benefit">
+            <h3>Flexible Import/Export</h3>
+            <p>
+              Support for multiple file formats including CSV, KML, and direct
+              ForeFlight integration
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="security" class="security">
+        <h2>Enterprise-Grade Security</h2>
+        <div class="security-features">
+          <ul>
+            <li>Dedicated deployment for each organization</li>
+            <li>Isolated databases for enhanced data protection</li>
+            <li>Role-based access control</li>
+            <li>Secure HTTPS encryption</li>
+            <li>Regular security updates and maintenance</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Get Started</h2>
+        <p>
+          Ready to streamline your aviation operations? Contact us to set up
+          your organization's dedicated instance.
+        </p>
+        <a href="#" id="openContactForm" class="cta-button">Contact Us</a>
+        <p class="email-alternative">
+          Or email us directly at:
+          <a href="mailto:info@aeropoint.app">info@aeropoint.app</a>
+        </p>
+      </section>
+
+      <!-- Contact Form Popup -->
+      <div id="contactPopup" class="popup">
+        <div class="popup-content">
+          <span class="close-popup">&times;</span>
+          <h2>Contact Us</h2>
+          <form name="access" id="access" action="https://form.aeropoint.app/api/v1/form/3DCipNRqa6Wyxrq9wdVUcIckFzo9BoJo" method="POST">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <input type="hidden" name="subject" value="Access Request" />
+            <div class="form-group">
+              <label for="content">Message:</label>
+              <textarea id="content" name="content" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Send Message</button>
+            <div class="overlay" style="display: none;">
+              <div></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <center><p>&copy; Matt Hammond Inc 2024 All rights reserved.</p></center>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
