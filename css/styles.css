@@ -562,4 +562,27 @@ button.cta-button {
         margin: 100px auto 50px;
         padding: 0 2rem;
     }
+}
+
+/* Download link styling */
+.download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.download-link i {
+    font-size: 1.1rem;
 } 
