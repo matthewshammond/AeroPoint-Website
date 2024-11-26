@@ -379,4 +379,187 @@ button.cta-button {
 
 .alert--error {
     color: #BF616A;
+}
+
+/* Documentation Styles */
+.documentation-content {
+    max-width: calc(100% - 300px - 4rem);
+    margin: 100px 300px 50px 2rem;
+    padding: 0;
+}
+
+.documentation-content h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.doc-section {
+    background-color: var(--card-background);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+.doc-section h2 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.doc-section h3 {
+    color: var(--text-color);
+    margin: 1.5rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.doc-section ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.doc-section ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.doc-section ul li::before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: -1.5rem;
+}
+
+.doc-section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .documentation-content {
+        margin-top: 120px;
+        padding: 0 1rem;
+    }
+    
+    .doc-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Documentation Styles - Additional */
+.doc-section ol {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.doc-section ol li {
+    margin-bottom: 0.5rem;
+}
+
+.doc-section ol + p,
+.doc-section ul + p {
+    margin-top: 1.5rem;
+}
+
+.doc-section h3 {
+    margin-top: 2rem;
+}
+
+.doc-section code {
+    background-color: var(--primary-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+/* Documentation Tables */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.doc-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.doc-section th,
+.doc-section td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.doc-section th {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.doc-section tr:hover {
+    background-color: var(--card-background);
+}
+
+@media (max-width: 768px) {
+    .doc-section th,
+    .doc-section td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Documentation Table of Contents */
+.table-of-contents {
+    position: fixed;
+    right: 2rem;
+    top: 100px;
+    width: 250px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-of-contents h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.table-of-contents ol {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+
+.table-of-contents li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.table-of-contents a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.table-of-contents a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .table-of-contents {
+        display: none; /* Hide on smaller screens */
+    }
+    
+    .documentation-content {
+        max-width: 1000px;
+        margin: 100px auto 50px;
+        padding: 0 2rem;
+    }
 } 
