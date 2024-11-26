@@ -3,7 +3,7 @@ $(document).ready(function () {
   $contactForm.submit(function (e) {
     e.preventDefault();
     $.ajax({
-      url: "https://form.aeropoint.app/api/v1/form/3DCipNRqa6Wyxrq9wdVUcIckFzo9BoJ1",
+      url: "https://form.aeropoint.app/api/v1/form/3DCipNRqa6Wyxrq9wdVUcIckFzo9B1J1",
       method: "POST",
       data: $(this).serialize(),
       dataType: "json",
