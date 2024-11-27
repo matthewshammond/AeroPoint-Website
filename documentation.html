@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -57,7 +57,7 @@
 
     <main class="documentation-content">
       <h1>AeroPoint Documentation</h1>
-      
+
       <section class="doc-section table-of-contents">
         <h2>Table of Contents</h2>
         <ol>
@@ -76,12 +76,19 @@
 
       <section id="introduction" class="doc-section">
         <h2>Introduction</h2>
-        <p>AeroPoint is a comprehensive aviation waypoint management system designed to help users create, manage, and export waypoints and associated files for use in various aviation platforms, particularly ForeFlight. The software allows for organized storage of waypoints, plates, map layers, and associated files within program-specific containers.</p>
+        <p>
+          AeroPoint is a comprehensive aviation waypoint management system
+          designed to help users create, manage, and export waypoints and
+          associated files for use in various aviation platforms, particularly
+          ForeFlight. The software allows for organized storage of waypoints,
+          plates, map layers, and associated files within program-specific
+          containers.
+        </p>
       </section>
 
       <section id="getting-started" class="doc-section">
         <h2>Getting Started</h2>
-        
+
         <h3>User Access</h3>
         <ul>
           <li>Users must be invited to access the system</li>
@@ -104,7 +111,8 @@
         <h3>Program Management</h3>
         <ul>
           <li>Create and manage multiple programs</li>
-          <li>Each program contains its own:
+          <li>
+            Each program contains its own:
             <ul>
               <li>Waypoints</li>
               <li>Plates</li>
@@ -118,7 +126,10 @@
         <h3>File Organization</h3>
         <p>The system organizes files into four main categories:</p>
         <ol>
-          <li><strong>Waypoint Files</strong> - Files associated with specific waypoints</li>
+          <li>
+            <strong>Waypoint Files</strong> - Files associated with specific
+            waypoints
+          </li>
           <li><strong>Plates</strong> - Airport plates and procedures</li>
           <li><strong>Layers</strong> - Map overlay files</li>
           <li><strong>Files</strong> - General program-related files</li>
@@ -127,13 +138,18 @@
         <h3>Dropbox Integration</h3>
         <ul>
           <li>Optional connection to Dropbox for automatic file syncing</li>
-          <li>When connected:
+          <li>
+            When connected:
             <ul>
-              <li>Content packs are saved to <code>/Apps/ForeFlight/contentpack/</code></li>
+              <li>
+                Content packs are saved to
+                <code>/Apps/ForeFlight/contentpack/</code>
+              </li>
               <li>Program files are saved to <code>/Apps/ForeFlight/</code></li>
             </ul>
           </li>
-          <li>Without Dropbox:
+          <li>
+            Without Dropbox:
             <ul>
               <li>All files are downloaded directly to your device</li>
             </ul>
@@ -143,12 +159,13 @@
 
       <section id="programs" class="doc-section">
         <h2>Programs</h2>
-        
+
         <h3>Creating a Program</h3>
         <ol>
           <li>Navigate to Settings</li>
           <li>Click "Create Program"</li>
-          <li>Enter:
+          <li>
+            Enter:
             <ul>
               <li>Program Name</li>
               <li>Program Code (unique identifier)</li>
@@ -159,14 +176,16 @@
 
         <h3>Program Selection</h3>
         <ul>
-          <li>Use the dropdown at the top of the page to switch between programs</li>
+          <li>
+            Use the dropdown at the top of the page to switch between programs
+          </li>
           <li>Click "Switch Program" to activate the selected program</li>
         </ul>
       </section>
 
       <section id="waypoints" class="doc-section">
         <h2>Waypoints</h2>
-        
+
         <h3>Adding Waypoints</h3>
         <p>Waypoints can be added in two ways:</p>
 
@@ -174,7 +193,8 @@
         <ul>
           <li>Click "Add" in the navigation bar</li>
           <li>Fill in waypoint details</li>
-          <li>Supports multiple coordinate formats:
+          <li>
+            Supports multiple coordinate formats:
             <ul>
               <li>Decimal Degrees (DD): 40.446151</li>
               <li>Degrees Decimal Minutes (DDM): 40 26.769 N</li>
@@ -191,8 +211,15 @@
         </ul>
 
         <h3>CSV Import Format</h3>
-        <p>The system accepts CSV files with specific columns for waypoint data. Here's the required format:</p>
-        <p><a href="files/CAD.csv" download class="download-link"><i class="fas fa-download"></i> Download Sample CSV File</a></p>
+        <p>
+          The system accepts CSV files with specific columns for waypoint data.
+          Here's the required format:
+        </p>
+        <p>
+          <a href="files/CAD.csv" download class="download-link"
+            ><i class="fas fa-download"></i> Download Sample CSV File</a
+          >
+        </p>
 
         <div class="table-wrapper">
           <table>
@@ -205,18 +232,6 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Latitude</td>
-                <td>Waypoint latitude</td>
-                <td>Yes</td>
-                <td>34.1583333333333 or 31 35.47 N</td>
-              </tr>
-              <tr>
-                <td>Longitude</td>
-                <td>Waypoint longitude</td>
-                <td>Yes</td>
-                <td>-82.382 or 084 09.40 W</td>
-              </tr>
               <tr>
                 <td>Waypoint ID</td>
                 <td>Unique identifier for the waypoint</td>
@@ -242,10 +257,24 @@
                 <td>SC</td>
               </tr>
               <tr>
-                <td>FAA Identifier</td>
-                <td>FAA identifier (if applicable)</td>
+                <td>Latitude</td>
+                <td>Waypoint latitude</td>
+                <td>Yes</td>
+                <td>34.1583333333333 or 31 35.47 N</td>
+              </tr>
+              <tr>
+                <td>Longitude</td>
+                <td>Waypoint longitude</td>
+                <td>Yes</td>
+                <td>-82.382 or 084 09.40 W</td>
+              </tr>
+              <tr>
+                <td>Waypoint Type</td>
+                <td>
+                  Set the icon for the waypoint when exported as map layer
+                </td>
                 <td>No</td>
-                <td>SC83</td>
+                <td>target, pushpin, square, triangle, diamond, hazard</td>
               </tr>
               <tr>
                 <td>Airport</td>
@@ -254,10 +283,10 @@
                 <td>YES</td>
               </tr>
               <tr>
-                <td>Hazard</td>
-                <td>Whether location is a hazard (Yes/No)</td>
-                <td>Yes</td>
-                <td>NO</td>
+                <td>FAA Identifier</td>
+                <td>FAA identifier (if applicable)</td>
+                <td>No</td>
+                <td>SC83</td>
               </tr>
               <tr>
                 <td>Description</td>
@@ -271,8 +300,9 @@
 
         <h3>Important Notes</h3>
         <ul>
-          <li>Maximum file size for all uploads: 100MB</li>
-          <li>Coordinates can be entered in multiple formats:
+          <li>Maximum file size for all uploads: 200MB</li>
+          <li>
+            Coordinates can be entered in multiple formats:
             <ul>
               <li>Decimal Degrees (DD): 34.1583333333333</li>
               <li>Degrees Decimal Minutes (DDM): 31 35.47 N</li>
@@ -287,13 +317,16 @@
         <h3>Plates Tab</h3>
         <ul>
           <li>Upload airport plates and procedures</li>
-          <li>Requires:
+          <li>
+            Requires:
             <ul>
               <li>FAA Identifier (4 characters)</li>
               <li>Procedure Type selection</li>
             </ul>
           </li>
-          <li>Files are stored in the <code>byop</code> directory during export</li>
+          <li>
+            Files are stored in the <code>byop</code> directory during export
+          </li>
         </ul>
 
         <h3>Layers Tab</h3>
@@ -309,7 +342,8 @@
         <ul>
           <li>General file storage for program</li>
           <li>No format restrictions</li>
-          <li>Files stored here are:
+          <li>
+            Files stored here are:
             <ul>
               <li>Downloaded individually during export</li>
               <li>Placed in ForeFlight root when using Dropbox</li>
@@ -328,20 +362,25 @@
         <ul>
           <li>Creates ForeFlight-compatible package</li>
           <li>Includes all selected programs and states</li>
-          <li>Organizes files into appropriate directories:
+          <li>
+            Organizes files into appropriate directories:
             <ul>
               <li><code>/navdata/</code> - Waypoints and county names</li>
               <li><code>/layers/</code> - Map layers and county boundaries</li>
               <li><code>/byop/</code> - Plates and procedures</li>
             </ul>
           </li>
-          <li>With Dropbox:
+          <li>
+            With Dropbox:
             <ul>
-              <li>Package saved to <code>/Apps/ForeFlight/contentpack/</code></li>
+              <li>
+                Package saved to <code>/Apps/ForeFlight/contentpack/</code>
+              </li>
               <li>Program files saved to <code>/Apps/ForeFlight/</code></li>
             </ul>
           </li>
-          <li>Without Dropbox:
+          <li>
+            Without Dropbox:
             <ul>
               <li>Downloads as zip file</li>
               <li>Program files downloaded separately</li>
@@ -352,7 +391,8 @@
         <h4>2. Individual Files</h4>
         <ul>
           <li>Downloads each file separately</li>
-          <li>Includes:
+          <li>
+            Includes:
             <ul>
               <li>Program waypoints (CSV or KML)</li>
               <li>State files</li>
@@ -387,7 +427,8 @@
           <li>Add - Create new waypoint</li>
           <li>Export - Access export options</li>
           <li>Import - Import waypoint data</li>
-          <li>User Menu:
+          <li>
+            User Menu:
             <ul>
               <li>Account settings</li>
               <li>Program settings</li>
@@ -423,7 +464,9 @@
         <ul>
           <li>Original filenames are preserved during upload</li>
           <li>Spaces in filenames are maintained</li>
-          <li>Only during ForeFlight export are spaces converted to underscores</li>
+          <li>
+            Only during ForeFlight export are spaces converted to underscores
+          </li>
         </ul>
 
         <h3>State Files</h3>
@@ -475,4 +518,5 @@
 
     <script src="js/main.js"></script>
   </body>
-</html> 
+</html>
+
