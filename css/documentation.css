@@ -1,0 +1,122 @@
+/* Documentation Page Specific Styles */
+.documentation-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.documentation-container {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 2rem;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+.doc-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doc-nav li {
+  margin: 0.5rem 0;
+}
+
+.doc-nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.doc-nav a:hover,
+.doc-nav a.active {
+  background-color: var(--card-background);
+  color: var(--accent-color);
+}
+
+/* Documentation Content */
+.documentation-content {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.documentation-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.documentation-content h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.documentation-content h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem;
+}
+
+/* Code Blocks */
+.documentation-content pre {
+  background-color: var(--card-background);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Tables */
+.documentation-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.documentation-content th,
+.documentation-content td {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.documentation-content th {
+  background-color: var(--card-background);
+}
+
+/* Lists */
+.documentation-content ul,
+.documentation-content ol {
+  padding-left: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .documentation-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+  }
+
+  .documentation-content {
+    padding: 0;
+  }
+} 
