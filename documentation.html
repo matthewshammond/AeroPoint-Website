@@ -10,15 +10,35 @@
     />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="images/favicon/site.webmanifest" />
 
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/documentation.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body class="documentation-page">
     <nav class="navbar">
@@ -39,18 +59,26 @@
         <nav class="doc-nav">
           <ul>
             <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#getting-started">Getting Started</a>
+            <li>
+              <a href="#getting-started">Getting Started</a>
               <ul>
                 <li><a href="#user-access">User Access</a></li>
                 <li><a href="#user-roles">User Roles</a></li>
                 <li><a href="#initial-setup">Initial Setup</a></li>
               </ul>
             </li>
-            <li><a href="#core-features">Core Features</a>
+            <li>
+              <a href="#core-features">Core Features</a>
               <ul>
                 <li><a href="#program-management">Program Management</a></li>
-                <li><a href="#deconfliction-management">Deconfliction Management</a></li>
-                <li><a href="#automatic-deconfliction">Automatic Deconfliction</a></li>
+                <li>
+                  <a href="#deconfliction-management"
+                    >Deconfliction Management</a
+                  >
+                </li>
+                <li>
+                  <a href="#automatic-deconfliction">Automatic Deconfliction</a>
+                </li>
                 <li><a href="#file-organization">File Organization</a></li>
                 <li><a href="#dropbox-integration">Dropbox Integration</a></li>
               </ul>
@@ -69,13 +97,28 @@
       <main class="documentation-content">
         <section id="introduction">
           <h1>AeroPoint Documentation</h1>
-          <p>AeroPoint is a comprehensive aviation waypoint management system designed to streamline the creation, management, and export of waypoints and associated files for various aviation platforms, particularly ForeFlight. The software allows users to organize waypoints, plates, map layers, and other files within program-specific containers, ensuring easy access and efficient management.</p>
-          <p>In addition to its waypoint management capabilities, AeroPoint provides advanced tools for aircraft deconfliction tailored for utility, fire, and law enforcement flight departments. By leveraging pilot input and operational timeframes, the software generates and exports precise map overlays directly to ForeFlight, helping to ensure safe and coordinated airspace operations.</p>
+          <p>
+            AeroPoint is a comprehensive aviation waypoint management system
+            designed to streamline the creation, management, and export of
+            waypoints and associated files for various aviation platforms,
+            particularly ForeFlight. The software allows users to organize
+            waypoints, plates, map layers, and other files within
+            program-specific containers, ensuring easy access and efficient
+            management.
+          </p>
+          <p>
+            In addition to its waypoint management capabilities, AeroPoint
+            provides advanced tools for aircraft deconfliction tailored for
+            utility, fire, and law enforcement flight departments. By leveraging
+            pilot input and operational timeframes, the software generates and
+            exports precise map overlays directly to ForeFlight, helping to
+            ensure safe and coordinated airspace operations.
+          </p>
         </section>
 
         <section id="getting-started">
           <h2>Getting Started</h2>
-          
+
           <section id="user-access">
             <h3>User Access</h3>
             <ul>
@@ -89,8 +132,12 @@
           <section id="user-roles">
             <h3>User Roles</h3>
             <ul>
-              <li><strong>Regular Users:</strong> Basic waypoint and file management</li>
-              <li><strong>Company Admins:</strong>
+              <li>
+                <strong>Regular Users:</strong> Basic waypoint and file
+                management
+              </li>
+              <li>
+                <strong>Company Admins:</strong>
                 <ul>
                   <li>Create and manage programs</li>
                   <li>Import waypoints to any program</li>
@@ -98,7 +145,10 @@
                   <li>Edit company-wide settings</li>
                 </ul>
               </li>
-              <li><strong>Super Admins:</strong> Full system access and configuration</li>
+              <li>
+                <strong>Super Admins:</strong> Full system access and
+                configuration
+              </li>
             </ul>
           </section>
 
@@ -119,7 +169,8 @@
             <h3>Program Management</h3>
             <ul>
               <li>Create and manage multiple programs</li>
-              <li>Each program contains its own:
+              <li>
+                Each program contains its own:
                 <ul>
                   <li>Waypoints</li>
                   <li>Plates</li>
@@ -128,7 +179,8 @@
                 </ul>
               </li>
               <li>Programs can be shared across user groups</li>
-              <li>Support for hazard programs with special handling:
+              <li>
+                Support for hazard programs with special handling:
                 <ul>
                   <li>Automatically appends "Hazards" to program name</li>
                   <li>Adds "-HAZ" suffix to program code</li>
@@ -143,7 +195,8 @@
             <h3>Deconfliction Management</h3>
             <ul>
               <li>Plan and track aircraft operations</li>
-              <li>Input fields for:
+              <li>
+                Input fields for:
                 <ul>
                   <li>Aircraft type (Plane/Helicopter/Drone/Other)</li>
                   <li>Tail number (for planes and helicopters)</li>
@@ -161,32 +214,32 @@
             <h3>Automatic Deconfliction Exports</h3>
             <ul>
               <li>System automatically exports deconfliction data hourly</li>
-              <li>Export includes:
+              <li>
+                Export includes:
                 <ul>
                   <li>Active flight operations</li>
                   <li>Planned operations for next 24 hours</li>
                   <li>Operating areas as map overlays</li>
                 </ul>
               </li>
-              <li>Export formats:
+              <li>
+                Export formats:
                 <ul>
                   <li>KML files for ForeFlight visualization</li>
                   <li>CSV files for record keeping</li>
                 </ul>
               </li>
-              <li>File naming convention:
+              <li>
+                Export locations:
                 <ul>
-                  <li>Deconfliction_{DATE}_{TIME}.kml</li>
-                  <li>Operations_{DATE}_{TIME}.csv</li>
-                </ul>
-              </li>
-              <li>Export locations:
-                <ul>
-                  <li>Dropbox users: Automatically synced to ForeFlight directory</li>
+                  <li>
+                    Dropbox users: Automatically synced to ForeFlight directory
+                  </li>
                   <li>Non-Dropbox users: Available for manual download</li>
                 </ul>
               </li>
-              <li>Email notifications:
+              <li>
+                Email notifications:
                 <ul>
                   <li>Company admins receive daily summary</li>
                   <li>Users notified of overlapping operations</li>
@@ -200,7 +253,10 @@
             <h3>File Organization</h3>
             <p>The system organizes files into four main categories:</p>
             <ol>
-              <li><strong>Waypoint Files</strong> - Files associated with specific waypoints</li>
+              <li>
+                <strong>Waypoint Files</strong> - Files associated with specific
+                waypoints
+              </li>
               <li><strong>Plates</strong> - Airport plates and procedures</li>
               <li><strong>Layers</strong> - Map overlay files</li>
               <li><strong>Files</strong> - General program-related files</li>
@@ -211,13 +267,20 @@
             <h3>Dropbox Integration</h3>
             <ul>
               <li>Optional connection to Dropbox for automatic file syncing</li>
-              <li>When connected:
+              <li>
+                When connected:
                 <ul>
-                  <li>Content packs are saved to <code>/Apps/ForeFlight/contentpack/</code></li>
-                  <li>Program files are saved to <code>/Apps/ForeFlight/</code></li>
+                  <li>
+                    Content packs are saved to
+                    <code>/Apps/ForeFlight/contentpack/</code>
+                  </li>
+                  <li>
+                    Program files are saved to <code>/Apps/ForeFlight/</code>
+                  </li>
                 </ul>
               </li>
-              <li>Without Dropbox:
+              <li>
+                Without Dropbox:
                 <ul>
                   <li>All files are downloaded directly to your device</li>
                 </ul>
@@ -234,7 +297,8 @@
             <ol>
               <li>Navigate to Settings</li>
               <li>Click "Create Program"</li>
-              <li>Enter:
+              <li>
+                Enter:
                 <ul>
                   <li>Program Name</li>
                   <li>Program Code (unique identifier)</li>
@@ -247,7 +311,10 @@
           <section id="program-selection">
             <h3>Program Selection</h3>
             <ul>
-              <li>Use the dropdown at the top of the page to switch between programs</li>
+              <li>
+                Use the dropdown at the top of the page to switch between
+                programs
+              </li>
               <li>Click "Switch Program" to activate the selected program</li>
             </ul>
           </section>
@@ -264,7 +331,8 @@
             <ul>
               <li>Click "Add" in the navigation bar</li>
               <li>Fill in waypoint details</li>
-              <li>Supports multiple coordinate formats:
+              <li>
+                Supports multiple coordinate formats:
                 <ul>
                   <li>Decimal Degrees (DD): 40.446151</li>
                   <li>Degrees Decimal Minutes (DDM): 40 26.769 N</li>
@@ -283,8 +351,11 @@
 
           <section id="csv-import">
             <h3>CSV Import Format</h3>
-            <p>The system accepts CSV files with specific columns for waypoint data. Here's the required format:</p>
-            
+            <p>
+              The system accepts CSV files with specific columns for waypoint
+              data. Here's the required format:
+            </p>
+
             <div class="table-container">
               <table>
                 <thead>
@@ -334,7 +405,9 @@
                   </tr>
                   <tr>
                     <td>Waypoint Type</td>
-                    <td>Set the icon for the waypoint when exported as map layer</td>
+                    <td>
+                      Set the icon for the waypoint when exported as map layer
+                    </td>
                     <td>No</td>
                     <td>target, pushpin, square, triangle, diamond, hazard</td>
                   </tr>
@@ -363,7 +436,8 @@
             <h4>Important Notes:</h4>
             <ul>
               <li>Maximum file size for all uploads: 100MB</li>
-              <li>Coordinates can be entered in multiple formats:
+              <li>
+                Coordinates can be entered in multiple formats:
                 <ul>
                   <li>Decimal Degrees (DD): 34.1583333333333</li>
                   <li>Degrees Decimal Minutes (DDM): 31 35.47 N</li>
@@ -407,11 +481,17 @@
             <p>Users can customize how coordinates are displayed:</p>
             <ul>
               <li>Access through user settings</li>
-              <li>Available formats:
+              <li>
+                Available formats:
                 <ul>
                   <li>Decimal Degrees (DD): 40.446151, -79.982928</li>
-                  <li>Degrees Decimal Minutes (DDM): 40° 26.769' N, 79° 58.976' W</li>
-                  <li>Degrees Minutes Seconds (DMS): 40° 26' 46.14" N, 79° 58' 58.56" W</li>
+                  <li>
+                    Degrees Decimal Minutes (DDM): 40° 26.769' N, 79° 58.976' W
+                  </li>
+                  <li>
+                    Degrees Minutes Seconds (DMS): 40° 26' 46.14" N, 79° 58'
+                    58.56" W
+                  </li>
                 </ul>
               </li>
               <li>Setting persists across sessions</li>
@@ -428,13 +508,17 @@
             <h3>Plates Tab</h3>
             <ul>
               <li>Upload airport plates and procedures</li>
-              <li>Requires:
+              <li>
+                Requires:
                 <ul>
                   <li>FAA Identifier (4 characters)</li>
                   <li>Procedure Type selection</li>
                 </ul>
               </li>
-              <li>Files are stored in the <code>byop</code> directory during export</li>
+              <li>
+                Files are stored in the <code>byop</code> directory during
+                export
+              </li>
             </ul>
           </section>
 
@@ -454,7 +538,8 @@
             <ul>
               <li>General file storage for program</li>
               <li>No format restrictions</li>
-              <li>Files stored here are:
+              <li>
+                Files stored here are:
                 <ul>
                   <li>Downloaded individually during export</li>
                   <li>Placed in ForeFlight root when using Dropbox</li>
@@ -475,20 +560,27 @@
             <ul>
               <li>Creates ForeFlight-compatible package</li>
               <li>Includes all selected programs and states</li>
-              <li>Organizes files into appropriate directories:
+              <li>
+                Organizes files into appropriate directories:
                 <ul>
                   <li><code>/navdata/</code> - Waypoints and county names</li>
-                  <li><code>/layers/</code> - Map layers and county boundaries</li>
+                  <li>
+                    <code>/layers/</code> - Map layers and county boundaries
+                  </li>
                   <li><code>/byop/</code> - Plates and procedures</li>
                 </ul>
               </li>
-              <li>With Dropbox:
+              <li>
+                With Dropbox:
                 <ul>
-                  <li>Package saved to <code>/Apps/ForeFlight/contentpack/</code></li>
+                  <li>
+                    Package saved to <code>/Apps/ForeFlight/contentpack/</code>
+                  </li>
                   <li>Program files saved to <code>/Apps/ForeFlight/</code></li>
                 </ul>
               </li>
-              <li>Without Dropbox:
+              <li>
+                Without Dropbox:
                 <ul>
                   <li>Downloads as zip file</li>
                   <li>Program files downloaded separately</li>
@@ -499,7 +591,8 @@
             <h4>2. Individual Files:</h4>
             <ul>
               <li>Downloads each file separately</li>
-              <li>Includes:
+              <li>
+                Includes:
                 <ul>
                   <li>Program waypoints (CSV or KML)</li>
                   <li>State files</li>
@@ -532,9 +625,9 @@
 
         <section id="contractor-management">
           <h2>Contractor Management</h2>
-          
+
           <p>Company Admins can add and manage contractors:</p>
-          
+
           <section id="contractor-types">
             <h3>Contractor Types</h3>
             <ul>
@@ -570,7 +663,8 @@
               <li>Navigate to Company Settings</li>
               <li>Select "Manage Contractors"</li>
               <li>Click "Add Contractor"</li>
-              <li>Enter contractor details:
+              <li>
+                Enter contractor details:
                 <ul>
                   <li>Email address</li>
                   <li>Access duration</li>
@@ -637,7 +731,10 @@
             <ul>
               <li>Original filenames are preserved during upload</li>
               <li>Spaces in filenames are maintained</li>
-              <li>Only during ForeFlight export are spaces converted to underscores</li>
+              <li>
+                Only during ForeFlight export are spaces converted to
+                underscores
+              </li>
             </ul>
           </section>
 
@@ -685,7 +782,6 @@
             </ul>
           </section>
         </section>
-
       </main>
     </div>
 
