@@ -83,10 +83,38 @@
                 <li><a href="#dropbox-integration">Dropbox Integration</a></li>
               </ul>
             </li>
-            <li><a href="#programs">Programs</a></li>
-            <li><a href="#waypoints">Waypoints</a></li>
+            <li>
+              <a href="#programs">Programs</a>
+              <ul>
+                <li><a href="#creating-program">Creating a Program</a></li>
+                <li><a href="#program-selection">Program Selection</a></li>
+                <li><a href="#county-management">County Management</a></li>
+                <li><a href="#notam-integration">NOTAM Integration</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#waypoints">Waypoints</a>
+              <ul>
+                <li><a href="#adding-waypoints">Adding Waypoints</a></li>
+                <li><a href="#csv-import">CSV Import Format</a></li>
+                <li><a href="#waypoint-types">Waypoint Types</a></li>
+                <li><a href="#airport-waypoints">Airport Waypoints</a></li>
+                <li><a href="#notam-management">NOTAM Management</a></li>
+                <li><a href="#waypoint-files">Waypoint Files</a></li>
+                <li><a href="#coordinate-display">Coordinate Display</a></li>
+              </ul>
+            </li>
             <li><a href="#file-management">File Management</a></li>
-            <li><a href="#export-options">Export Options</a></li>
+            <li>
+              <a href="#export-options">Export Options</a>
+              <ul>
+                <li><a href="#foreflight-export">ForeFlight Export</a></li>
+                <li><a href="#notam-export">NOTAM Export</a></li>
+                <li><a href="#automatic-notam-exports">Automatic NOTAM Exports</a></li>
+                <li><a href="#cad-export">CAD Export</a></li>
+                <li><a href="#avionics-export">Avionics Export</a></li>
+              </ul>
+            </li>
             <li><a href="#contractor-management">Contractor Management</a></li>
             <li><a href="#mobile-features">Mobile Features</a></li>
             <li><a href="#tips">Tips & Tricks</a></li>
@@ -318,6 +346,29 @@
               <li>Click "Switch Program" to activate the selected program</li>
             </ul>
           </section>
+
+          <section id="county-management">
+            <h3>County Management</h3>
+            <ul>
+              <li>Add counties to programs for territorial definition</li>
+              <li>Add detailed descriptions to counties for better information sharing</li>
+              <li>Set program priority for counties shared across multiple programs</li>
+              <li>County boundaries are included in map exports</li>
+              <li>County descriptions support larger text entries for comprehensive information</li>
+            </ul>
+          </section>
+
+          <section id="notam-integration">
+            <h3>NOTAM Integration</h3>
+            <p>NOTAMs (previously managed as separate hazard programs) are now integrated directly into main programs:</p>
+            <ul>
+              <li>All waypoints from hazard programs have been migrated to their respective main programs as NOTAMs</li>
+              <li>Access NOTAMs through the NOTAM tab in your main program</li>
+              <li>Create new NOTAMs directly within the main program</li>
+              <li>Configure automatic NOTAM exports in account settings</li>
+              <li>Set time-based activation with start and end dates</li>
+            </ul>
+          </section>
         </section>
 
         <section id="waypoints">
@@ -412,7 +463,7 @@
                       Set the icon for the waypoint when exported as map layer
                     </td>
                     <td>No</td>
-                    <td>target, pushpin, square, triangle, diamond, hazard</td>
+                    <td>target, pushpin, square, triangle, diamond, notam</td>
                   </tr>
                   <tr>
                     <td>Airport</td>
@@ -431,6 +482,18 @@
                     <td>Additional details about the waypoint</td>
                     <td>No</td>
                     <td>"Helipad"</td>
+                  </tr>
+                  <tr>
+                    <td>Start Time</td>
+                    <td>Start time for NOTAMs (if applicable)</td>
+                    <td>No</td>
+                    <td>2025-03-10 08:00</td>
+                  </tr>
+                  <tr>
+                    <td>End Time</td>
+                    <td>End time for NOTAMs (if applicable)</td>
+                    <td>No</td>
+                    <td>2025-03-15 17:00</td>
                   </tr>
                 </tbody>
               </table>
@@ -454,7 +517,7 @@
             <h3>Waypoint Types</h3>
             <ul>
               <li>Target (default)</li>
-              <li>Hazard (shown in red bold text)</li>
+              <li>NOTAM (previously Hazard, shown in red bold text)</li>
               <li>Diamond</li>
               <li>Square</li>
               <li>Triangle</li>
@@ -467,14 +530,27 @@
             <ul>
               <li>Check "Airport" checkbox to designate as airport</li>
               <li>FAA Identifier required for airport waypoints</li>
-              <li>Cannot be marked as hazard</li>
+              <li>Cannot be marked as NOTAM</li>
+            </ul>
+          </section>
+
+          <section id="notam-management">
+            <h3>NOTAM Management</h3>
+            <p>NOTAMs (Notices to Airmen) are integrated directly into your main programs:</p>
+            <ul>
+              <li>Create NOTAMs by selecting "NOTAM" as the waypoint type</li>
+              <li>Set optional start and end dates/times for temporary NOTAMs</li>
+              <li>Add detailed descriptions that support larger text entries</li>
+              <li>Attach PDF or TXT files to provide additional documentation</li>
+              <li>NOTAMs appear with enhanced visibility in exports</li>
+              <li>Expired NOTAMs can trigger automatic exports (when configured)</li>
             </ul>
           </section>
 
           <section id="waypoint-files">
             <h3>Waypoint Files</h3>
             <ul>
-              <li>Upload PDF or TXT files to individual waypoints</li>
+              <li>Upload PDF or TXT files to individual waypoints and NOTAMs</li>
               <li>Blue dot indicator shows waypoints with attached files</li>
               <li>Files are included in exports based on export type</li>
             </ul>
@@ -606,6 +682,37 @@
                   <li>Waypoint files</li>
                 </ul>
               </li>
+            </ul>
+          </section>
+
+          <section id="notam-export">
+            <h3>NOTAM Export</h3>
+            <ul>
+              <li>Selectively export NOTAMs from specific programs</li>
+              <li>Configure automatic NOTAM exports in account settings</li>
+              <li>Automatic exports can be triggered when NOTAMs expire</li>
+              <li>Exports include enhanced visualization for better clarity</li>
+              <li>Larger text support for improved readability in ForeFlight</li>
+              <li>Attached files are included with NOTAM exports</li>
+            </ul>
+          </section>
+
+          <section id="automatic-notam-exports">
+            <h3>Automatic NOTAM Exports</h3>
+            <p>Configure automatic NOTAM exports in your account settings:</p>
+            <ol>
+              <li>Navigate to Account Settings</li>
+              <li>Select the "NOTAM Export" tab</li>
+              <li>Choose which programs to include in automatic exports</li>
+              <li>Enable "Export on NOTAM expiration" to generate new exports when NOTAMs expire</li>
+              <li>Connect your Dropbox account for seamless delivery</li>
+            </ol>
+            <p>Benefits of automatic NOTAM exports:</p>
+            <ul>
+              <li>Always have the most current NOTAM information</li>
+              <li>Expired NOTAMs are automatically removed from your ForeFlight</li>
+              <li>New exports are generated without manual intervention</li>
+              <li>Email notifications when new exports are created</li>
             </ul>
           </section>
 
