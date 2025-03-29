@@ -3,7 +3,7 @@ $(document).ready(function () {
   $contactForm.submit(function (e) {
     e.preventDefault();
     $.ajax({
-      url: "https://form.aeropoint.app/api/v1/form/3DCipNRqa6Wyxrq9wdVUcIckFzo9B1J1",
+      url: "https://form.aeropoint.com/api/v1/form/3DCipNRqa6Wyxrq9wdVUcIckFzo9B1J1",
       method: "POST",
       data: $(this).serialize(),
       dataType: "json",
@@ -24,7 +24,7 @@ $(document).ready(function () {
           );
         $contactForm.find(".overlay").fadeIn();
         setTimeout(function () {
-          window.location.href = "https://aeropoint.app";
+          window.location.href = "https://aeropoint.com";
         }, 3000);
       },
       error: function (err) {
