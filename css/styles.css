@@ -357,4 +357,26 @@ body {
         right: 1rem;
         top: 1rem;
     }
+}
+
+/* reCAPTCHA Styling */
+.recaptcha-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.recaptcha-text a {
+  color: #4A90E2;
+  text-decoration: none;
+}
+
+.recaptcha-text a:hover {
+  text-decoration: underline;
+}
+
+/* Hide reCAPTCHA badge */
+.grecaptcha-badge {
+  visibility: hidden;
 } 
