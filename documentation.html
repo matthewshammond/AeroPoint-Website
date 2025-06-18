@@ -119,6 +119,7 @@
               </ul>
             </li>
             <li><a href="#contractor-management">Contractor Management</a></li>
+            <li><a href="#email-management">Email List Management</a></li>
             <li><a href="#mobile-features">Mobile Features</a></li>
             <li><a href="#tips">Tips & Tricks</a></li>
           </ul>
@@ -210,22 +211,14 @@
                 </ul>
               </li>
               <li>Programs can be shared across user groups</li>
-              <li>
-                Support for hazard programs with special handling:
-                <ul>
-                  <li>Automatically appends "Hazards" to program name</li>
-                  <li>Adds "-HAZ" suffix to program code</li>
-                  <li>Forces waypoint type to "hazard"</li>
-                  <li>Disables airport designation</li>
-                </ul>
-              </li>
+              <li>NOTAM integration allows for temporary hazard tracking within existing programs</li>
             </ul>
           </section>
 
           <section id="deconfliction-management">
             <h3>Deconfliction Management</h3>
             <ul>
-              <li>Plan and track aircraft operations</li>
+              <li>Plan and track aircraft operations with embedded interactive maps</li>
               <li>
                 Input fields for:
                 <ul>
@@ -233,11 +226,14 @@
                   <li>Tail number (for planes and helicopters)</li>
                   <li>Mission type with customizable "Other" option</li>
                   <li>Date and time windows</li>
-                  <li>Operating areas</li>
+                  <li>Operating areas with visual map selection</li>
                 </ul>
               </li>
-              <li>Helps prevent airspace conflicts</li>
-              <li>Exports to ForeFlight for visualization</li>
+              <li>Advanced filtering options to sort and search deconfliction entries</li>
+              <li>Filter by aircraft type, date range, mission type, and status</li>
+              <li>Real-time map visualization of operating areas and conflicts</li>
+              <li>Helps prevent airspace conflicts through visual coordination</li>
+              <li>Exports to ForeFlight for enhanced visualization</li>
             </ul>
           </section>
 
@@ -275,6 +271,8 @@
                   <li>Company admins receive daily summary</li>
                   <li>Users notified of overlapping operations</li>
                   <li>Contractors alerted to new operations in their areas</li>
+                  <li>Email list functionality - add people to receive deconfliction notifications without granting system access</li>
+                  <li>Configurable notification preferences for different user types</li>
                 </ul>
               </li>
             </ul>
@@ -398,7 +396,8 @@
             <h4>2. Bulk Import:</h4>
             <ul>
               <li>Click "Import" in the navigation bar</li>
-              <li>Upload CSV file with waypoint data</li>
+              <li>Choose "Waypoints" to upload CSV file with waypoint data</li>
+              <li>Choose "NOTAMs" to upload CSV file with NOTAM data</li>
               <li>Choose existing program or create new one</li>
             </ul>
           </section>
@@ -408,8 +407,8 @@
             <p>
               The system accepts CSV files with specific columns for waypoint
               data. 
-              <a href="files/CAD.csv" download class="download-link">
-                <i class="fas fa-download"></i> Download Sample CSV
+              <a href="files/waypoints.csv" download class="download-link">
+                <i class="fas fa-download"></i> Download Sample Waypoints CSV
               </a>
             </p>
 
@@ -536,6 +535,83 @@
               <li>NOTAMs appear with enhanced visibility in exports</li>
               <li>Expired NOTAMs can trigger automatic exports (when configured)</li>
             </ul>
+
+            <h4>Bulk NOTAM Import:</h4>
+            <p>
+              For mass import of NOTAMs, use the dedicated NOTAM CSV format:
+              <a href="files/notams.csv" download class="download-link">
+                <i class="fas fa-download"></i> Download Sample NOTAMs CSV
+              </a>
+            </p>
+            
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Column Name</th>
+                    <th>Description</th>
+                    <th>Required</th>
+                    <th>Format Examples</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>NOTAM ID</td>
+                    <td>Unique identifier for the NOTAM (5 characters max)</td>
+                    <td>Yes</td>
+                    <td>FDC12, A1234</td>
+                  </tr>
+                  <tr>
+                    <td>NOTAM Name</td>
+                    <td>Brief descriptive title</td>
+                    <td>Yes</td>
+                    <td>TFR - VIP Movement</td>
+                  </tr>
+                  <tr>
+                    <td>City</td>
+                    <td>City location</td>
+                    <td>No</td>
+                    <td>WASHINGTON</td>
+                  </tr>
+                  <tr>
+                    <td>State</td>
+                    <td>State location (2-letter code)</td>
+                    <td>No</td>
+                    <td>DC</td>
+                  </tr>
+                  <tr>
+                    <td>Latitude</td>
+                    <td>NOTAM latitude</td>
+                    <td>Yes</td>
+                    <td>38.8977 or 33 44.56 N</td>
+                  </tr>
+                  <tr>
+                    <td>Longitude</td>
+                    <td>NOTAM longitude</td>
+                    <td>Yes</td>
+                    <td>-77.0365 or 084 23.12 W</td>
+                  </tr>
+                  <tr>
+                    <td>NOTAM Text</td>
+                    <td>Detailed NOTAM description</td>
+                    <td>Yes</td>
+                    <td>"TFR in effect for VIP movement. All aircraft operations prohibited within 3NM radius."</td>
+                  </tr>
+                  <tr>
+                    <td>Start Date</td>
+                    <td>Effective start date/time</td>
+                    <td>No</td>
+                    <td>6/15/24 14:00</td>
+                  </tr>
+                  <tr>
+                    <td>End Date</td>
+                    <td>Expiration date/time</td>
+                    <td>No</td>
+                    <td>6/15/24 18:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           <section id="waypoint-files">
@@ -789,6 +865,33 @@
           </section>
         </section>
 
+        <section id="email-management">
+          <h2>Email List Management</h2>
+
+          <section id="notification-lists">
+            <h3>Deconfliction Email Lists</h3>
+            <p>Company Admins can manage email notification lists for enhanced communication:</p>
+            <ul>
+              <li>Add external stakeholders to receive deconfliction notifications</li>
+              <li>Recipients receive updates without requiring system access</li>
+              <li>Separate lists for different types of operations or geographic areas</li>
+              <li>Email notifications include operation details and timing</li>
+              <li>Automatic removal of invalid or bounced email addresses</li>
+            </ul>
+          </section>
+
+          <section id="notification-settings">
+            <h3>Notification Configuration</h3>
+            <ul>
+              <li>Configure notification frequency (immediate, daily digest, weekly summary)</li>
+              <li>Set geographic filters for location-specific notifications</li>
+              <li>Choose operation types to include in notifications</li>
+              <li>Custom message templates for different stakeholder groups</li>
+              <li>Opt-out management for recipients</li>
+            </ul>
+          </section>
+        </section>
+
         <section id="mobile-features">
           <h2>Mobile Features</h2>
 
@@ -857,12 +960,13 @@
             </ul>
           </section>
 
-          <section id="hazard-tips">
-            <h3>Hazard Waypoints</h3>
+          <section id="notam-tips">
+            <h3>NOTAM Waypoints</h3>
             <ul>
               <li>Automatically exported as KML regardless of export option</li>
               <li>Cannot be marked as airports</li>
-              <li>Visually distinct in waypoint list</li>
+              <li>Visually distinct in waypoint list with enhanced formatting</li>
+              <li>Support time-based activation with start and end dates</li>
             </ul>
           </section>
 
